@@ -136,6 +136,12 @@ const Dashboard = () => {
             </Button>
             <Button 
               variant="ghost" 
+              onClick={() => navigate('/pricing')}
+            >
+              Pricing
+            </Button>
+            <Button 
+              variant="ghost" 
               onClick={() => navigate('/')}
             >
               Back to Home

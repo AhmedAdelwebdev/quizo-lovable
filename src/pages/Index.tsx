@@ -84,11 +84,19 @@ const Index = () => {
           <h1 className="text-2xl font-bold text-gradient font-poppins">Quizo</h1>
           <div className="flex items-center gap-4">
             {isLoggedIn ? (
-              <Button variant="default" onClick={() => navigate('/dashboard')}>
-                Dashboard
-              </Button>
+              <>
+                <Button variant="ghost" onClick={() => navigate('/pricing')}>
+                  Pricing
+                </Button>
+                <Button variant="default" onClick={() => navigate('/dashboard')}>
+                  Dashboard
+                </Button>
+              </>
             ) : (
               <>
+                <Button variant="ghost" onClick={() => navigate('/pricing')}>
+                  Pricing
+                </Button>
                 <Button variant="ghost" onClick={() => navigate('/login')}>
                   Login
                 </Button>
@@ -124,8 +132,8 @@ const Index = () => {
                 Create Your Quiz
                 <ArrowRight className="w-5 h-5" />
               </Button>
-              <Button variant="outline" size="xl">
-                Explore Quizzes
+              <Button variant="outline" size="xl" onClick={() => navigate('/pricing')}>
+                View Pricing
               </Button>
             </div>
           </div>
@@ -188,7 +196,7 @@ const Index = () => {
             >
               <QuizCard 
                 quiz={quiz} 
-                onPlay={(id) => navigate(`/quiz/${id}`)}
+                onPlay={(id) => window.open(`/quiz/${id}`, '_blank')}
               />
             </div>
           ))}
