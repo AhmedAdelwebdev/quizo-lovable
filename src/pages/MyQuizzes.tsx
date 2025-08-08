@@ -17,9 +17,10 @@ import {
   Trophy,
   Calendar,
   Copy,
-  Brain
+  Brain,
+  User
 } from 'lucide-react';
-import { getQuizzes, getQuizResults, Quiz, QuizResult, saveQuiz, User } from '@/hooks/useLocalStorage';
+import { getQuizzes, getQuizResults, Quiz, QuizResult, saveQuiz, User as UserType } from '@/hooks/useLocalStorage';
 import { useToast } from '@/hooks/use-toast';
 
 const MyQuizzes = () => {
